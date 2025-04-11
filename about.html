@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/logo-1.jfif" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff339f1277.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    background-color: #000; /* Dark background */
+    font-family: 'Arial', sans-serif;
+}
+
+.digital-future-section {
+    background-color: #000; /* Dark background for contrast */
+}
+
+.image-wrapper {
+    position: relative;
+}
+
+.premium-badge {
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+    background-color: #08b3ca; /* Using the requested color */
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    transform: rotate(-15deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text-pink {
+    color: #08b3ca; /* Pink color for small text (Who We Are) */
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    color: #d3d3d3; /* Light grey for the paragraph */
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #08b3ca, #928e8b);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+    background: linear-gradient(45deg, #928e8b, #08b3ca);
+}
+.align{
+        display: flex;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+/* founders */
+.team-section {
+    padding: 60px 0;
+}
+
+.team-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.team-member {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.team-member h4 {
+    font-size: 20px;
+    margin-top: 15px;
+    color: white;
+}
+
+.team-member p {
+    color: #f3f3f3;
+}
+
+.social-links a {
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #08b3ca;
+}
+
+/* about middel */
+.content-section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.left-content {
+    background: url('./assets/images/check.jpg') center/cover no-repeat;
+    padding: 30px;
+    border-radius: 15px;
+    position: relative;
+    animation: fadeInLeft 1.5s;
+    filter: brightness(0.7);
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3))
+}
+
+.value-box h2 {
+    font-size: 32px;
+    color: #fff;
+}
+
+.value-box p {
+    color: #dcdcdc;
+}
+
+.learn-more-btn {
+    background-color: #ff6961;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.learn-more-btn:hover {
+    background-color: #ff4742;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-card {
+    padding: 20px;
+    background-color: #928e8b;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeInRight 1.5s;
+}
+
+.vision-card {
+    background-color: #8b63ff;
+}
+
+.mission-card {
+    background-color: #ff639f;
+}
+
+.info-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.info-card i {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@media (max-width: 768px) {
+    .premium-badge {
+        width: 100px;
+        height: 100px;
+        font-size: 12px;
+    }
+}
+
+/* bussines */
+.business-showcase {
+    background: linear-gradient(45deg, #504f4e, #056774);
+    padding: 60px 0;
+    color: white;
+}
+
+.showcase-content h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logo-item i {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.logo-item p {
+    margin: 0;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        width: 100px;
+    }
+
+    .showcase-content h2 {
+        font-size: 22px;
+    }
+}
+
+/* for who we are */
+/* General Styles */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For mobile devices (max-width: 575px) */
+@media (max-width: 575px) {
+    .digital-future-section h1 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .digital-future-section p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .btn-custom {
+        width: 100%; /* Full-width button for mobile */
+    }
+
+    .image-wrapper img {
+        width: 100%; /* Ensure full width for images on mobile */
+    }
+}
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .digital-future-section h1 {
+        font-size: 2rem; /* Medium-sized heading */
+    }
+
+    .digital-future-section p {
+        font-size: 1.1rem; /* Adjust paragraph size */
+    }
+
+    .btn-custom {
+        width: 100%; /* Full-width button for tablets */
+    }
+
+    .image-wrapper img {
+        width: 100%; /* Ensure full width for images on tablets */
+    }
+}
+
+/* For desktop devices (min-width: 992px and above) */
+@media (min-width: 992px) {
+    .digital-future-section h1 {
+        font-size: 2.5rem; /* Larger heading for desktop */
+    }
+
+    .digital-future-section p {
+        font-size: 1.2rem; /* Adjust paragraph size for desktop */
+    }
+
+    .btn-custom {
+        width: auto; /* Button will not be full-width on desktop */
+    }
+}
+
+/* for business */
+/* General Styles */
+.business-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.brand-logos .logo-item {
+    text-align: center;
+}
+
+/* Adjust the spacing */
+.logo-item i {
+    color: #08b3ca; /* Custom color for icons */
+}
+
+.logo-item p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Media Queries */
+
+/* For Mobile devices (max-width: 575px) */
+@media (max-width: 575px) {
+    .business-showcase h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    /* .brand-logos {
+        flex-direction: column; /* Stack logos vertically */*/
+
+    .logo-item {
+        margin: 10px 0; /* Spacing between each logo */
+    }
+
+    .logo-item i {
+        font-size: 1.5rem; /* Smaller icon size for mobile */
+    }
+
+    .logo-item p {
+        font-size: 10px;
+    }
+}
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .business-showcase h2 {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+
+    .logo-item {
+        margin: 15px; /* Adjust spacing for tablet view */
+    }
+
+    .logo-item i {
+        font-size: 1.8rem;
+    }
+
+    .logo-item p {
+        font-size: 10px;
+    }
+}
+
+/* For Larger screens (min-width: 992px) */
+@media (min-width: 992px) {
+    .business-showcase h2 {
+        font-size: 2.5rem; /* Larger text for desktops */
+    }
+
+    .logo-item i {
+        font-size: 2.5rem;
+    }
+
+    .logo-item p {
+        font-size: 10px;
+    }
+}
+
+/* memebers */
+@media (max-width: 768px) {
+    .team-member img {
+        display: none;
+    }
+    .team-info {
+        display: block;
+    }
+    .social-links {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .team-info {
+        display: none;
+    }
+}
+
+</style>
+<body>
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" class="d-flex align-items-center">
+        <img src="./assets/images/logo-1.jfif" alt="Fusion Media Elite" width="50">
+        <span style="color: #08b3ca;">Indocs</span> Media
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" style="border: none; background: #000; outline: none; box-shadow: none;" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="webdevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item" href="videoediting.html">Video Editing</a></li>
+              <li><a class="dropdown-item" href="animation.html">2D & 3D Ads</a></li>
+              <li><a class="dropdown-item" href="graphic.html">Graphic Designs</a></li>
+              <li><a class="dropdown-item" href="social.html">Social Media Management</a></li>
+              <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+        <a href="index.html#Started" style="text-decoration: none;" class="btn btn-primary rounded-pill get-started-btn dnone head-btn">Get Started</a>
+      </div>
+    </div>
+  </nav>
+      <section class="hero d-flex justify-content-center align-items-center">
+        <div class="text-center text-white fade-in-slide">
+            <h2 class="mb-4">About <span style="color: #08b3ca;">us</span></h2>
+            <h1><span style="color: #08b3ca;">Indocs</span> we live for your vision</h1>
+            <p class="lead mb-5">At Indocs Media, we turn your ideas into stunning visuals with precision and creativity.</p>
+            <a href="index.html#Started" style="text-decoration: none;" class="btn btn-primary btn-lg me-3 rounded-pill  head-btn">Get Started</a>
+            <a href="#explore" style="text-decoration: none;" class="btn btn-outline-light btn-lg rounded-pill head-btn">Learn More</a>
+        </div>
+        
+      </section>
+      <hr style="color:#08b3ca;">
+      <!-- Future -->
+      <section class="digital-future-section py-5"  id="explore">                                            
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="image-wrapper glow">
+                        <img src="./assets/images/about-banner-img.jpg" style="width: 100%;" class="img-fluid rounded" alt="Digital Future">
+                    </div>
+                </div>
+                <div class="col-md-6 text-white">
+                    <div class="content">
+                        <small class="text-uppercase text-pink">Who We Are</small>
+                        <h1 class="display-5">Your Digital Future, Our Expertise: I.D.M Delivers Excellence.</h1>
+                        <p>Pede inceptos dui diam felis vehicula rutrum ridiculus at consectetur nam et mollis vitae netus duis pellentesque ligula aenean taciti eget tincidunt commodo tristique elit.</p>
+                        <a href="index.html#expertise" class="btn btn-lg btn-custom mt-4">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Business showcase section -->
+ <section class="business-showcase py-5">
+    <div class="container">
+        <div class="showcase-content text-center">
+            <h2>Join us we can make something big together with your spirit and our dedication.</h2>
+            <div class="brand-logos d-flex justify-content-center flex-wrap">
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-building fa-2x"></i>
+                    <p>Pro services</p>
+                </div>
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-camera fa-2x"></i>
+                    <p>Capture the magic</p>
+                </div>
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-globe fa-2x"></i>
+                    <p>World wide Availablity</p>
+                </div>
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <p>Business in Mobile</p>
+                </div>
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-cloud fa-2x"></i>
+                    <p>Data on Cloud</p>
+                </div>
+                <div class="logo-item mx-3 my-3">
+                    <i class="fas fa-wifi fa-2x"></i>
+                    <p>Connectivity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- content -->
+<section class="content-section">
+    <div class="container">
+        <div class="row">
+            <!-- Main Value Section -->
+            <div class="col-lg-7 content-box left-content" id="value">
+                <div class="value-box">
+                    <p class="label">OUR VALUE</p>
+                    <h2>Smart Designs, Sharp Results - Choose Us for Digital Excellence.</h2>
+                    <p>Innovative Solutions Tailored to Your Vision.
+                        Transforming Ideas into Digital Masterpieces.
+                        Empowering Your Brand with Creative Precision.
+                        Crafting Strategies That Drive Success.
+                        Experience the Indocs of Creativity and Technology.</p>
+                    <a href="index.html#explore" class="btn learn-more-btn">Explore</a>
+                </div>
+            </div>
+
+            <!-- Vision and Mission Section -->
+            <div class="col-lg-5 right-content">
+                <!-- Vision Card -->
+                <div class="info-card vision-card" id="vision">
+                    <p class="label">OUR VISION</p>
+                    <h3>Elevate Your Digital Presence with Our Expertise.</h3>
+                    <p>Unlock the power of innovative strategies, creative designs, and cutting-edge technology to amplify your brand's online impact.</p>
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="info-card mission-card" id="mission">
+                    <p class="label">OUR MISSION</p>
+                    <h3>Unleash Your Potential in the Digital Realm with Us.</h3>
+                    <p>Empowering your brand with innovative solutions, expert strategies, and creative excellence to thrive in the ever-evolving digital landscape.</p>
+                    <i class="fas fa-arrow-circle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr style="color: #08b3ca;">
+    <!-- founders -->
+    <section class="team-section">
+        <div class="container text-center">
+            <h2 class="team-title"><span style="color: #08b3ca;">Meet</span> Our Team</h2>
+            <p class="team-subtitle">Alone we can do so little; together we can do so much.</p>
+            <div class="row">
+                <!-- Team Member 1 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Mr Shridas</h4>
+                        <p style="color: #08b3ca;">Founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Alex Parker" class="img-fluid rounded">
+                        <h4>Devansh</h4>
+                        <p style="color: #08b3ca;">Co-founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Victoria Thomas" class="img-fluid rounded">
+                        <h4>Anshu Yaduvanshi</h4>
+                        <p style="color: #08b3ca;">Co-founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Mithilesh</h4>
+                        <p style="color: #08b3ca;">Co-founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Monal</h4>
+                        <p style="color: #08b3ca;">CDM</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Payal</h4>
+                        <p style="color: #08b3ca;">HWD</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Vicky Sahani</h4>
+                        <p style="color: #08b3ca;">Video Editor</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/150" alt="Brandon James" class="img-fluid rounded">
+                        <h4>Name</h4>
+                        <p style="color: #08b3ca;">Post</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- <footer></footer> -->
+<hr style="color: #08b3ca;" class="mt-5">
+<footer class="footer text-white py-4" id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <span><img src="./assets/images/logo-1.jfif" style="width: 50px; margin-left: -10px;" alt="Error"></span>
+              <span><h5 class="text-uppercase mb-4"><span style="color: #08b3ca;">Indocs</span> <span style="color: white;">media</span></h5></span>
+              <p>Transforming Ideas into Digital Excellence. Elevate your online presence with our innovative solutions and strategic digital services.</p>
+              <div class="social-icons">
+                  <a href="mailto:fusionmediaelite@gmail.com" style="text-decoration: none;" class="text-white me-2"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://www.instagram.com/fusionmediaelite?igsh=MXpxd2FyajNjcnBp" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="https://x.com/fusionmediaelit?t=iRye1thsfJIyrme0Uzv7kw&s=09" style="text-decoration: none;" class="text-white me-2"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/fusion-media-elite-production-b7029a32a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="text-decoration: none;" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              
+          </div>
+          <div class="col-md-8">
+              <div class="row">
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Services</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="webdevelopment.html" style="text-decoration: none; color: #474747;">Website Development</a></li>
+                          <li><a href="videoediting.html" style="text-decoration: none; color: #474747;">Video Editing</a></li>
+                          <li><a href="animation.html" style="text-decoration: none; color: #474747;">2d & 3d Ads</a></li>
+                          <li><a href="graphic.html" style="text-decoration: none; color: #474747;">Graphic Designs</a></li>
+                          <li><a href="social.html" style="text-decoration: none; color: #474747;">Social Media Management</a></li>
+                          <li><a href="digital.html" style="text-decoration: none; color: #474747;">Digital Marketing</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Support</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="help-faq&term.html#help" style="text-decoration: none; color: #474747;">Help Center</a></li>
+                          <li><a href="help-faq&term.html#faq" style="text-decoration: none; color: #474747;">FAQ</a></li>
+                          <li><a href="contact.html" style="text-decoration: none; color: #474747;">Contact us</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Company</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="about.html" style="text-decoration: none; color: #474747;">About Us</a></li>
+                          <li><a href="help-faq&term.html#term" style="text-decoration: none; color: #474747;">Our Team</a></li>
+                          <li><a href="careers&aim.html#careers" style="text-decoration: none; color: #474747;">Careers</a></li>
+                          <li><a href="careers&aim.html#aim" style="text-decoration: none; color: #474747;">Our Aim</a></li>
+                          <li><a href="teenera.html" style="text-decoration: none; color: #474747;">Teen Era</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="foeter-bottom d-flex mt-5" style="justify-content: space-between;">
+        <p><span style="color: white;">Copyright© 2024</span> <span style="color: #08b3ca;">Indocs</span> <span style="color: white;">media</span>, <br> All rights reserved. Operated by Teen era PVT LTD.</p>
+      </div>
+  </div>
+</footer>
+    <script src="script.js"></script>
+    <!-- Ensure Bootstrap's JS and dependencies are included just before the closing body tag -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+review section
+<section class="testimonial-section py-5 mt-5">
+  <div class="container">
+      <div class="row text-center mb-5">
+          <div class="col">
+              <h4 class="text-uppercase" style="color: #08b3ca">Testimonial</h4>
+              <h2 class="" style="font-size: 30px;">Client Feedback & Reviews</h2>
+          </div>
+      </div>
+      <div id="testimonialSlider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>Data analysis by Fusion media elite provided invaluable insights. Their expertise helped us make informed decisions, leading to remarkable business growth.</p>
+                            <h5>Riya</h5>
+                            <span class="text-muted">FRESH BITES CATERING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>Fusion media elite transformed our online presence! Their web development expertise and creative design elevated our brand, attracting more customers than ever before.</p>
+                            <h5>Sarah</h5>
+                            <span class="text-muted">THOMPSON & CO.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>Choosing Fusion media elite for digital marketing was a game-changer. Our SEO ranking skyrocketed, leading to increased visibility and a significant boost in sales.</p>
+                            <h5>Manish</h5>
+                            <span class="text-muted">BRIGHT ELECTRONICS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>Great service, and highly recommend! Fusion media elite helped my small business get noticed online.</p>
+                            <h5>Tanishka</h5>
+                            <span class="text-muted">TINYSHOP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>The design and functionality were top-notch. Our customers love the new website!</p>
+                            <h5>Krishna Das</h5>
+                            <span class="text-muted">Bigdays CORP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4 col-12 mx-auto">
+                        <div class="testimonial-box p-4 text-center">
+                            <img src="./assets/images/logo-org.jfif" style="width: 80px; height: 80px;" class="rounded-circle mb-3" alt="Client Image">
+                            <p>Fast delivery, excellent quality! Fusion media elite exceeded our expectations.</p>
+                            <h5>Shivkumar Mahajan</h5>
+                            <span class="text-muted">Mahajan SOLUTIONS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Carousel Indicators (Circles) -->
+        <ol class="carousel-indicators">
+            <li data-target="#testimonialSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonialSlider" data-slide-to="1"></li>
+            <li data-target="#testimonialSlider" data-slide-to="2"></li>
+            <li data-target="#testimonialSlider" data-slide-to="3"></li>
+            <li data-target="#testimonialSlider" data-slide-to="4"></li>
+            <li data-target="#testimonialSlider" data-slide-to="5"></li>
+        </ol>
+    </div>
+  </div>
+</section>

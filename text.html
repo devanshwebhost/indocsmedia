@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sci-Fi Animated Boxes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #0d0d0d; /* Dark background */
+        }
+
+        .box {
+            position: absolute;
+            width: 30px; /* Box size */
+            height: 30px; /* Box size */
+            border: 2px solid rgba(8, 179, 202, 0.8);
+            box-shadow: 0 0 20px rgba(8, 179, 202, 0.8);
+            border-radius: 10%; /* Rounded corners */
+        }
+
+        .animation-set-1 {
+            background: rgba(255, 255, 255, 0.2);
+            animation: float 3s infinite ease-in-out, rotate 4s infinite linear, colorChange 6s infinite alternate;
+        }
+
+        .animation-set-2 {
+            background: rgba(8, 179, 202, 0.5);
+            animation: float 2s infinite ease-in-out, scale 3s infinite ease-in-out, pulse 4s infinite alternate;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes colorChange {
+            0% { background: rgba(255, 255, 255, 0.2); }
+            50% { background: rgba(8, 179, 202, 0.5); }
+            100% { background: rgba(255, 255, 255, 0.2); }
+        }
+
+        @keyframes scale {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(8, 179, 202, 0.8); }
+            50% { box-shadow: 0 0 40px rgba(8, 179, 202, 1); }
+            100% { box-shadow: 0 0 20px rgba(8, 179, 202, 0.8); }
+        }
+
+        .shooting-star {
+            animation: shoot 1s forwards;
+            opacity: 0; /* Start invisible */
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1; /* Visible at start */
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100vw);
+                opacity: 0; /* Fade out */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    const numBoxes = 50; // Total number of boxes to create
+    const container = document.body;
+    const boxes = [];
+    const boxSize = 30; // Box size
+    const gap = 10; // Gap size
+
+    function isOverlapping(newBox) {
+        const rect1 = newBox.getBoundingClientRect();
+        return boxes.some(box => {
+            const rect2 = box.getBoundingClientRect();
+            return !(
+                rect1.top + rect1.height + gap < rect2.top ||
+                rect1.top > rect2.top + rect2.height + gap ||
+                rect1.left + rect1.width + gap < rect2.left ||
+                rect1.left > rect2.left + rect2.width + gap
+            );
+        });
+    }
+
+    function createBoxes() {
+        for (let i = 0; i < numBoxes; i++) {
+            const box = document.createElement('div');
+            box.className = 'box ' + (i < 25 ? 'animation-set-1' : 'animation-set-2');
+            let overlapping;
+
+            do {
+                const x = Math.random() * (window.innerWidth - boxSize - gap); // Adjust for box width and gap
+                const y = Math.random() * (window.innerHeight - boxSize - gap); // Adjust for box height and gap
+                box.style.left = x + 'px';
+                box.style.top = y + 'px';
+                overlapping = isOverlapping(box);
+            } while (overlapping); // Repeat until no overlap
+
+            boxes.push(box); // Store the box
+            container.appendChild(box);
+        }
+    }
+
+    function createShootingStar() {
+        const randomIndex = Math.floor(Math.random() * numBoxes);
+        const shootingStar = document.createElement('div');
+        shootingStar.className = 'box shooting-star';
+        shootingStar.style.left = boxes[randomIndex].style.left;
+        shootingStar.style.top = boxes[randomIndex].style.top;
+        container.appendChild(shootingStar);
+
+        // Start the shooting star animation
+        setTimeout(() => {
+            shootingStar.classList.add('shooting-star');
+        }, 0);
+
+        // Remove the shooting star after animation completes
+        setTimeout(() => {
+            container.removeChild(shootingStar);
+        }, 1000); // Match the duration of the shoot animation
+    }
+
+    createBoxes();
+    setInterval(createShootingStar, 3000); // Create a shooting star every 3 seconds
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

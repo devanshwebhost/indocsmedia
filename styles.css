@@ -1,0 +1,444 @@
+/* Google Fonts */
+body, h1, h2, p, a {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+  }
+  
+  .navbar {
+    background-color: #000;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    margin-right: 20px;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #08b3ca;
+  }
+  
+  .get-started-btn {
+    background: linear-gradient(90deg, rgb(8, 179, 202) 0%, rgb(8, 179, 202) 100%);
+  }
+  
+  .hero {
+    height: 100vh;
+    background-color: #000;
+    background-image: url('wave-background.png'); /* Add a wave background as seen in the image */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .head-btn:hover{
+    color: #000 !important;
+  }
+  
+  .hero p {
+    font-size: 16px !important;
+    font-weight: 300 !important;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(90deg, rgb(8, 179, 202) 0%, rgb(8, 179, 202) 100%);
+    
+    border: none;
+  }
+  
+  .btn-outline-light {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+  }
+  .dnone{
+    display: block;
+  }
+
+.custom-card {
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  color: #fff;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #08b3ca, #044952) 1;
+  padding: 20px;
+  max-width: 350px;
+}
+.custom-card h5 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #08b3ca;
+}
+.custom-card .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.custom-card .info {
+  margin-top: 10px;
+}
+.custom-card .info span {
+  display: block;
+  font-size: 14px;
+  color: #bbb;
+}
+.custom-card .info strong {
+  color: #fff;
+}
+.custom-card .budget {
+  font-size: 20px;
+  color: #ff00a6;
+  font-weight: bold;
+}
+
+h1 {
+  color: white; /* Custom color for heading */
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* extra card */
+.glow-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border-image: linear-gradient(45deg, #08b3ca, #044952) 1;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); }
+
+.glow{
+  background-color: rgba(255, 255, 255, 0.05);
+  border-image: linear-gradient(45deg, #08b3ca, #044952) 1;
+  box-shadow: 0 0 15px 5px rgba(8, 179, 202, 0.5);
+}
+  /* progress bar */
+  .magic-section {
+    padding: 30px 0;
+}
+
+.magic-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.magic-section p.lead {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.progress-bar {
+  background: linear-gradient(to right, #08b3ca, #05a6b5);
+}
+
+h5 {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 1rem !important;
+}
+.progress{
+  height: 5px;
+}
+.custom-height {
+  min-height: 200px; /* Adjust the minimum height as needed */
+}
+
+
+.glow-card:hover {
+  box-shadow: 0 0 15px 5px rgba(8, 179, 202, 0.5); /* Glowing hover effect */
+  /* transform: translateY(-10px); */
+}
+
+.icon {
+  font-size: 3rem;
+  color: #fca5f1; /* Color matching the icon */
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.btn-learn-more {
+  background: linear-gradient(to right, #08b3ca, #05a6b5); /* Gradient button */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  transition: background 0.5s ease-in-out;
+}
+
+.btn-learn-more:hover {
+  color: #fff;
+  background: linear-gradient(to right, #08b3ca, #05a6b5);
+
+}
+
+/* Optional for making buttons glow on hover */
+.btn-learn-more:hover {
+  box-shadow: 0 0 10px 5px rgba(8, 179, 202, 0.4);
+}
+
+/* Glass effect for the service cards */
+.service-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Transparent background */
+  border: 1px solid #08b3ca; /* Border matching the h1 color */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+
+/* Add subtle hover effect */
+.service-card:hover {
+  transform: translateY(-20px); /* Lift the card on hover */
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Button styles */
+.btn-custom {
+  background-color: #08b3ca;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: darken(#08b3ca, 10%);
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #474747;
+}
+
+/* review */
+.testimonial-section {
+  background: black;
+  padding: 50px 0;
+}
+
+.testimonial-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border:1px solid #08b3ca;
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 15px;
+  padding: 30px;
+  color: #fff;
+  height: 100%;
+}
+
+.testimonial-box p {
+  font-style: italic;
+  color: #ddd;
+}
+
+.testimonial-box h5 {
+  margin-top: 15px;
+  color: #fff;
+}
+
+.text-uppercase {
+  color: #08b3ca;
+}
+
+/* Adjust the size and position of the carousel indicators (dots) */
+.carousel-indicators {
+  bottom: -30px;
+}
+
+.carousel-indicators li {
+  background-color: #08b3ca;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+}
+
+/* how it works sec  */
+.steps-section {
+  background-color: #000;
+  padding: 50px 0;
+  color: #fff;
+}
+
+.steps-section h2 {
+  color: #fff;
+}
+
+.step-box {
+  background-color: #1e1e2f;
+  border-radius: 15px;
+  height: 100%;
+}
+
+.step-box p {
+  color: #ddd;
+}
+
+.icon {
+  color: #08b3ca;
+}
+
+.gradient-btn {
+  background: linear-gradient(to right, #08b3ca, #05a6b5);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px #0b1618;
+  transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+  box-shadow: 0 6px 20px #048091;
+  transform: translateY(-2px);
+}
+
+/* footer */
+.footer-background {
+  background-color: #333; /* Dark background for footer */
+  color: white;
+}
+.fa {
+  color: #08b3ca;
+}
+a {
+  color: #08b3ca;
+}
+.footer-text {
+  padding: 20px 0;
+}
+
+ footer a:hover{
+  color: #08b3ca !important;
+  transition: 0.5s;
+  ;
+}
+
+/* utility classes */
+.hover-blue:hover{
+  border: 2px solid #08b3ca;
+  border-radius: 0px;
+}
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 32px;
+    }
+
+    .dropdown-item{
+      color: #ffff !important;
+    }
+    
+    .hero h1 {
+      font-size: 20px;
+    }
+    
+    .hero p {
+      font-size: 14px;
+    }
+    .dnone{
+        display: none;
+    }
+    .testimonial-section{
+      margin-top: 0px !important;
+    }
+  }
+  
+/* header-text-animation */
+.fade-in-slide {
+  animation: fadeSlide 1.5s ease-out forwards;
+  opacity: 0; /* Initially hidden */
+}
+
+@keyframes fadeSlide {
+  0% {
+      opacity: 0;
+      transform: translateY(30px); /* Start slightly lower */
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+  }
+}
+
+.testimonial-box{
+  height: 60vh !important;
+}
+
+/* .testimonial media quariy */
+    /* Media query for portrait mode (max-width: 768px for tablets and smaller devices) */
+    @media (max-width: 768px) {
+      #testimonialSlider .carousel-inner .carousel-item {
+          display: flex;
+          justify-content: center;
+      }
+      #testimonialSlider .carousel-inner .carousel-item .col-md-4 {
+          display: none;
+      }
+      #testimonialSlider .carousel-inner .carousel-item.active .col-md-4:first-child {
+          display: block;
+      }
+  }
+  
+
+  .dropdown-item:hover{
+    color: #08b3ca !important;
+    background: #000 !important;
+  }
+  .dropdown-menu{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); /* Transparent background */
+  border: 1px solid #08b3ca; /* Border matching the h1 color */
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  }

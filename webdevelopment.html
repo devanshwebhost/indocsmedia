@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webdevelopment/</title>
+    <link rel="shortcut icon" href="./assets/images/logo-1.jfif" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ff339f1277.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.header {
+    background-color: #08b3ca; /* Brand color */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.intro, .highlights, .process, .cta {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.highlights .highlight-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    max-width: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.process ol {
+    list-style-position: inside;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta {
+    background: #08b3ca; /* Brand color */
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.cta .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #08b3ca; /* Brand color */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cta .btn:hover {
+    background-color: #067d8f; /* Slightly darker brand color for hover effect */
+}
+
+
+.card h3 {
+    color: #08b3ca; /* Brand color */
+    font-size: 15px;
+}
+@media (max-width: 768px) 
+{
+  .highlights .highlight-cards, .cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+    </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" class="d-flex align-items-center">
+    <img src="./assets/images/logo-1.jfif" alt="Fusion Media Elite" width="50">
+    <span style="color: #08b3ca;">Indocs</span> Media
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" style="border: none; background: #000; outline: none; box-shadow: none;" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="webdevelopment.html">Website Development</a></li>
+              <li><a class="dropdown-item" href="videoediting.html">Video Editing</a></li>
+              <li><a class="dropdown-item" href="animation.html">2D & 3D Ads</a></li>
+              <li><a class="dropdown-item" href="graphic.html">Graphic Designs</a></li>
+              <li><a class="dropdown-item" href="social.html">Social Media Management</a></li>
+              <li><a class="dropdown-item" href="digital.html">Digital Marketing</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact us</a>
+          </li>
+        </ul>
+        <a href="index.html#Started" style="text-decoration: none;" class="btn btn-primary rounded-pill get-started-btn dnone head-btn">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero d-flex justify-content-center align-items-center">
+    <div class="text-center text-white fade-in-slide">
+      <h2> Website<span style="color: #08b3ca;"> development</span></h2>
+      <h1 class="mb-4">Cut, <span style="color: #08b3ca;">Enhance, </span>Deliver</h1>
+      <p class="lead mb-5">At Indocs Media, we turn your ideas into stunning visuals with precision and creativity.</p>
+      <a href="index.html#Started" style="text-decoration: none;" class="btn btn-primary btn-lg me-3 rounded-pill  head-btn">Get Started</a>
+      <a href="#learn" style="text-decoration: none;" class="btn btn-outline-light btn-lg rounded-pill head-btn">Learn More</a>
+    </div>
+  </section>
+<hr style="color: #08b3ca;">
+
+<!-- main -->
+<main class="services-container">
+  <!-- Introduction Section -->
+  <section class="intro" id="learn">
+      <h2>Why Choose IDM for Your Website?</h2>
+      <p>
+          At Indocs Media, we create visually appealing and highly functional websites tailored to meet your specific business needs. 
+          Our expertise ensures a perfect blend of design, speed, and user experience.
+      </p>
+  </section>
+
+  <!-- Service Highlights Section -->
+  <section class="highlights">
+      <h2>Our Expertise</h2>
+      <div class="highlight-cards">
+          <div class="card">
+              <h3>Custom Website Design</h3>
+              <p>Unique and responsive designs built to reflect your brand identity.</p>
+          </div>
+          <div class="card">
+              <h3>E-commerce Solutions</h3>
+              <p>Powerful platforms to boost your online sales and simplify transactions.</p>
+          </div>
+          <div class="card">
+              <h3>SEO Optimization</h3>
+              <p>Enhance your website’s visibility and rank higher on search engines.</p>
+          </div>
+          <div class="card">
+              <h3>Speed and Performance</h3>
+              <p>Ensure fast loading times and a smooth user experience.</p>
+          </div>
+      </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process">
+      <h2>Our Development Process</h2>
+      <ol>
+          <li><strong>Consultation:</strong> Understand your goals and requirements.</li>
+          <li><strong>Design:</strong> Create a stunning and user-friendly design prototype.</li>
+          <li><strong>Development:</strong> Turn the design into a fully functional website.</li>
+          <li><strong>Testing:</strong> Ensure the website is bug-free and performs optimally.</li>
+          <li><strong>Launch & Support:</strong> Deploy your website and provide ongoing support.</li>
+      </ol>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta">
+      <h2>Ready to Build Your Dream Website?</h2>
+      <p>Get in touch with our expert team today!</p>
+      <a href="mailto:fusionmediaelite@gmail.com" class="btn">Contact Us</a>
+  </section>
+</main>
+  <div class="main py-5 d-flex" style="justify-content: center; align-items: center; flex-direction: column; gap: 20px;" >
+    <img src="./assets/images/development.jpg" style="width: 300px; " alt="Under-development">
+    <i class="fa-solid fa-laptop-code"></i>
+    <h2 style="text-align: center;">This page is coming soon! Exciting updates in progress...</h2>
+  </div>
+
+<!-- footer -->
+<hr style="color: #08b3ca;" class="mt-5">
+<footer class="footer text-white py-4" id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <span><img src="./assets/images/logo-1.jfif" style="width: 50px; margin-left: -10px;" alt="Error"></span>
+              <span><h5 class="text-uppercase mb-4"><span style="color: #08b3ca;">Indocs</span> <span style="color: white;"> media</span></h5></span>
+              <p>Transforming Ideas into Digital Excellence. Elevate your online presence with our innovative solutions and strategic digital services.</p>
+              <div class="social-icons">
+                  <a href="mailto:fusionmediaelite@gmail.com" style="text-decoration: none;" class="text-white me-2"><i class="fa-solid fa-envelope"></i></a>
+                  <a href="https://www.instagram.com/fusionmediaelite?igsh=MXpxd2FyajNjcnBp" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                  <a href="https://x.com/fusionmediaelit?t=iRye1thsfJIyrme0Uzv7kw&s=09" style="text-decoration: none;" class="text-white me-2"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/fusion-media-elite-production-b7029a32a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="text-decoration: none;" class="text-white me-2"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              
+          </div>
+          <div class="col-md-8">
+              <div class="row">
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Services</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="webdevelopment.html" style="text-decoration: none; color: #474747;">Website Development</a></li>
+                          <li><a href="videoediting.html" style="text-decoration: none; color: #474747;">Video Editing</a></li>
+                          <li><a href="animation.html" style="text-decoration: none; color: #474747;">2d & 3d Ads</a></li>
+                          <li><a href="graphic.html" style="text-decoration: none; color: #474747;">Graphic Designs</a></li>
+                          <li><a href="social.html" style="text-decoration: none; color: #474747;">Social Media Management</a></li>
+                          <li><a href="digital.html" style="text-decoration: none; color: #474747;">Digital Marketing</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Support</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="help-faq&term.html#help" style="text-decoration: none; color: #474747;">Help Center</a></li>
+                          <li><a href="help-faq&term.html#faq" style="text-decoration: none; color: #474747;">FAQ</a></li>
+                          <li><a href="contact.html" style="text-decoration: none; color: #474747;">Contact us</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+                  <div class="col-md-4">
+                      <h5 class="text-uppercase mb-4">Company</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="about.html" style="text-decoration: none; color: #474747;">About Us</a></li>
+                          <li><a href="help-faq&term.html#term" style="text-decoration: none; color: #474747;">Our Team</a></li>
+                          <li><a href="careers&aim.html#careers" style="text-decoration: none; color: #474747;">Careers</a></li>
+                          <li><a href="careers&aim.html#aim" style="text-decoration: none; color: #474747;">Our Aim</a></li>
+                          <li><a href="teenera.html" style="text-decoration: none; color: #474747;">Teen Era</a></li>
+                          <!-- More items -->
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="foeter-bottom d-flex mt-5" style="justify-content: space-between;">
+        <p><span style="color: white;">Copyright© 2024</span> <span style="color: #08b3ca;">Indocs</span> <span style="color: white;">media</span>, <br> All rights reserved. Operated by Teen era PVT LTD.</p>
+      </div>
+  </div>
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
