@@ -1,146 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transform Your Content with Pro Video Editing | Indocs Media</title>
     <meta name="description" content="Get high-quality video editing services at Indocs Media. From promos to reels, we craft visually stunning content tailored to your brand’s voice." />
-
-
-    <link rel="shortcut icon" href="./assets/images/logo-1.jfif" type="image/x-icon">
+    <link rel="canonical" href="https://indocsmedia.onrender.com/videoediting" />
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/logo-1.jfif" type="image/x-icon" />
+  
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/ff339f1277.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
-        rel="stylesheet">
-
+  
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <style>
-      .header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    <link rel="stylesheet" href="styles.css" />
+  
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Transform Your Content with Pro Video Editing | Indocs Media" />
+    <meta property="og:description" content="From brand reels to full promos, Indocs Media delivers video editing that makes your content shine." />
+    <meta property="og:image" content="https://indocsmedia.onrender.com/assets/images/logo-1.jfif" />
+    <meta property="og:url" content="https://indocsmedia.onrender.com/videoediting" />
+    <meta property="og:type" content="website" />
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Transform Your Content with Pro Video Editing | Indocs Media" />
+    <meta name="twitter:description" content="Get premium-quality, on-brand video edits from Indocs Media's professional team." />
+    <meta name="twitter:image" content="https://indocsmedia.onrender.com/assets/images/logo-1.jfif" />
+  
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Video Editing",
+      "provider": {
+        "@type": "Organization",
+        "name": "Indocs Media",
+        "url": "https://indocsmedia.onrender.com",
+        "logo": "https://indocsmedia.onrender.com/assets/images/logo-1.jfif",
+        "sameAs": [
+          "https://www.instagram.com/indocsmedia",
+          "https://www.linkedin.com/company/indocsmedia"
+        ]
+      },
+      "areaServed": "IN",
+      "description": "Professional video editing services including reels, promos, and YouTube content customized to your brand."
+    }
+    </script>
+  </head>
+  
+
+<style>
+  .header h1 {
+margin: 0;
+font-size: 2.5em;
 }
 
 .header p {
-    margin-top: 10px;
-    font-size: 1.2em;
+margin-top: 10px;
+font-size: 1.2em;
 }
 
 .services-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
 }
 
 .intro, .highlights, .tools, .process, .cta {
-    margin-bottom: 40px;
-    text-align: center;
+margin-bottom: 40px;
+text-align: center;
 }
 
 .highlights .highlight-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+margin-top: 20px;
 }
 
 .card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    flex: 1;
-    max-width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+background: white;
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 20px;
+flex: 1;
+max-width: 250px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
-    color: #08b3ca; /* Brand color */
+color: #08b3ca; /* Brand color */
 }
 
 .card p {
-    font-size: 14px;
+font-size: 14px;
 }
 
 .tools .tools-list {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    font-size: 1.1em;
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+font-size: 1.1em;
 }
 
 .tools span {
-    background: #08b3ca;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
+background: #08b3ca;
+color: white;
+padding: 5px 10px;
+border-radius: 4px;
 }
 
 .process ol {
-    list-style-position: inside;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
+list-style-position: inside;
+text-align: left;
+max-width: 600px;
+margin: 0 auto;
 }
 
 .cta {
-    background: #08b3ca; /* Brand color */
-    color: white;
-    padding: 20px;
-    border-radius: 8px;
+background: #08b3ca; /* Brand color */
+color: white;
+padding: 20px;
+border-radius: 8px;
 }
 
 .cta .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: white;
-    color: #08b3ca; /* Brand color */
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 14px;
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background: white;
+color: #08b3ca; /* Brand color */
+border-radius: 4px;
+text-decoration: none;
+font-size: 14px;
 }
 
 .cta .btn:hover {
-    background-color: #067d8f; /* Slightly darker brand color for hover effect */
+background-color: #067d8f; /* Slightly darker brand color for hover effect */
 }
 
 .card h3 {
-    color: #08b3ca; /* Brand color */
-    font-size: 15px;
+color: #08b3ca; /* Brand color */
+font-size: 15px;
 }
 
 .r-our-content{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    align-items: center;}
+width: 50%;
+display: flex;
+flex-direction: column;
+align-content: stretch;
+align-items: center;}
 @media (max-width: 768px) 
 {
-  .highlights .highlight-cards, .cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    flex-direction: column;
-    align-content: center;
-  }
+.highlights .highlight-cards, .cards-container{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+flex-direction: column;
+align-content: center;
+}
 }
 
-    </style>
-</head>
-
+</style>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
