@@ -264,14 +264,51 @@
   <section class="cta">
       <h2>Ready to Build Your Dream Website?</h2>
       <p>Get in touch with our expert team today!</p>
-      <a href="mailto:indocsmedia@gmail.com" class="btn">Contact Us</a>
+      <a href="mailto:indocsmedia@gmail.com" class="btn"style="color:black">Contact Us</a>
   </section>
 </main>
-  <div class="main py-5 d-flex" style="justify-content: center; align-items: center; flex-direction: column; gap: 20px;" >
+<div style="font-family: Arial, sans-serif; background-color: #000; padding: 20px;">
+  <h2 style="color: #fefefe; text-align: center; margin-bottom: 25px;">What we are doing ?</h2>
+  <div id="showcase-container" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;"></div>
+</div>
+
+<script>
+  const websites = [
+    // { title: "Zinoha - Seaside Properties", url: "https://zinoha.com", image: "https://via.placeholder.com/600x400", description: "A premium real estate website showcasing luxurious seaside properties.", review: "Exceptional design and user experience!" },
+    // { title: "Bhakti Path - Krishna Bal Leela", url: "https://bhaktipath.com", image: "https://via.placeholder.com/600x400", description: "A captivating website for children focusing on Krishna Bal Leela stories.", review: "Beautiful animations and storytelling!" },
+    // { title: "InfyPlus Consulting", url: "https://infyplus.com", image: "https://via.placeholder.com/600x400", description: "A professional consulting website with a sleek, corporate design.", review: "The website elevates our brand perception. Highly recommended!" },
+    // { title: "Indocs Media", url: "https://indocsmedia.onrender.com", image: "https://via.placeholder.com/600x400", description: "The official website for Indocs Media, showcasing digital marketing services.", review: "An all-in-one digital showcase!" },
+    { title: "Five Layars Snip", url: "#", image: "./assets-services/webdevelopment/fivelayers.png", description: "A dynamic website for an agancy! Can't share more info because the project is still in under development!", review: "Creative, engaging and unique site!", ud: true },
+    { title: "Just a Tea", url: "#", image: "https://indocsmedia.onrender.com/assets/images/logo-1.jfif", description: "A premium Tea shopping platform for quality Tea and world wide tea collections on one platform (U.D).", review: "Sleek design with a Premium feel!", ud: true }
+  ];
+
+  function renderShowcase() {
+    const container = document.getElementById('showcase-container');
+    container.innerHTML = '';
+
+    websites.forEach(site => {
+      const siteCard = `
+         <div style="position: relative; background-color: #fff; border-radius: 10px; padding: 15px; width: 300px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+          ${site.ud ? `<div title="Under Development" style="position: absolute; top: 10px; right: 10px; background-color: gold; color: #000; padding: 5px 10px; border-radius: 5px; cursor: pointer;">UD</div>` : ''}
+          <img src="${site.image}" alt="${site.title}" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;" />
+          <h3 style="color: #08b1c9; font-size: 18px; margin-bottom: 10px;">${site.title}</h3>
+          <p style="font-size: 14px; color: #555; margin-bottom: 10px;">${site.description}</p>
+          <p style="font-style: italic; color: #777; margin-bottom: 15px;">"${site.review}"</p>
+          <a href="${site.ud ? '#' : site.url}" target="_blank" style="background-color: #08b1c9; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">${site.ud ? "Under Development" : "Visit Website"}</a>
+        </div>
+      `;
+      container.innerHTML += siteCard;
+    });
+  }
+
+  renderShowcase();
+</script>
+
+  <!-- <div class="main py-5 d-flex" style="justify-content: center; align-items: center; flex-direction: column; gap: 20px;" >
     <img src="./assets/images/development.jpg" style="width: 300px; " alt="Under-development">
     <i class="fa-solid fa-laptop-code"></i>
     <h2 style="text-align: center;">This page is coming soon! Exciting updates in progress...</h2>
-  </div>
+  </div> -->
 
 <!-- footer -->
 <hr style="color: #08b3ca;" class="mt-5">

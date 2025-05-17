@@ -72,6 +72,10 @@ body, h1, h2, p, a {
     display: block;
   }
 
+  .nav-link:hover {
+    color: #08b3ca !important;
+  }
+
 .custom-card {
   background-color: #1c1c1c;
   border-radius: 15px;
