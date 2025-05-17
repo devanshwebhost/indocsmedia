@@ -249,10 +249,6 @@
                             <div>
                                 <h3>Let's Talk</h3>
                                 <p>Phone: 9999513446</p>
-<<<<<<< HEAD
-=======
-                                <!-- <p>Fax: unavailable</p> -->
->>>>>>> 49896e95cd606501a1fb6fe28ab79b9e7faf3e21
                             </div>
                         </div>
 
@@ -296,11 +292,7 @@
                         <h2 style="margin-bottom: 40px !important;">Send us a <span
                                 style="color: #08b3ca;">message</span></h2>
 
-<<<<<<< HEAD
                          <form id="contact-form" >
-=======
-                         <form id="contact-form" novalidate>
->>>>>>> 49896e95cd606501a1fb6fe28ab79b9e7faf3e21
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <input type="text" class="form-control" name="name" placeholder="Name" required>
@@ -323,11 +315,7 @@
                                         required></textarea>
                                 </div>
                             </div>
-<<<<<<< HEAD
                             <button type="submit" class="btn btn-custom">Send Message</button>
-=======
-                            <input type="submit" class="btn btn-custom">Send Message</input>
->>>>>>> 49896e95cd606501a1fb6fe28ab79b9e7faf3e21
                         </form>
                         <div id="notification-container"></div>
                     </div>
@@ -402,7 +390,6 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-<<<<<<< HEAD
     const form = document.getElementById('contact-form');
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -453,52 +440,6 @@
     }
 });
 
-=======
-        emailjs.init("1ZYLQfWaICQl2eN-L"); // Your EmailJS public key
-
-        const form = document.getElementById('contact-form');
-        const submitBtn = form.querySelector('button[type="submit"]');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // ✅ prevent page refresh
-
-            submitBtn.disabled = true;
-            submitBtn.innerText = 'Sending...';
-
-            const templateParams = {
-                from_name: form.name.value,
-                from_company: form.company.value,
-                user_email: form.email.value,
-                user_phone: form.phone.value,
-                subject: form.subject.value,
-                message: form.message.value,
-            };
-
-            emailjs.send('service_4bzo2ia', 'template_ahqfaax', templateParams)
-                .then(() => {
-                    showNotification('Message sent successfully!', 'success');
-                    form.reset();
-                })
-                .catch((error) => {
-                    showNotification('Failed to send message', 'error');
-                    console.error('EmailJS error:', error);
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = 'Send Message';
-                });
-        });
-
-        function showNotification(message, type) {
-            const notificationContainer = document.getElementById('notification-container');
-            const notification = document.createElement('div');
-            notification.innerText = message;
-            notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'}`;
-            notificationContainer.appendChild(notification);
-            setTimeout(() => notification.remove(), 3000);
-        }
-    });
->>>>>>> 49896e95cd606501a1fb6fe28ab79b9e7faf3e21
 </script>
 
     
