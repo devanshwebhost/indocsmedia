@@ -249,7 +249,6 @@
                             <div>
                                 <h3>Let's Talk</h3>
                                 <p>Phone: 9999513446</p>
-                                <!-- <p>Fax: unavailable</p> -->
                             </div>
                         </div>
 
@@ -391,50 +390,56 @@
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        emailjs.init("1ZYLQfWaICQl2eN-L"); // Your EmailJS public key
+    const form = document.getElementById('contact-form');
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-        const form = document.getElementById('contact-form');
-        const submitBtn = form.querySelector('button[type="submit"]');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // ✅ prevent page refresh
 
-        form.addEventListener('submit', function (event) {
-            event.preventDefault(); // ✅ prevent page refresh
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Sending...';
 
-            submitBtn.disabled = true;
-            submitBtn.innerText = 'Sending...';
+        const formData = {
+            name: form.name.value,
+            company: form.company.value,
+            email: form.email.value,
+            phone: form.phone.value,
+            subject: form.subject.value,
+            message: form.message.value,
+        };
 
-            const templateParams = {
-                from_name: form.name.value,
-                from_company: form.company.value,
-                user_email: form.email.value,
-                user_phone: form.phone.value,
-                subject: form.subject.value,
-                message: form.message.value,
-            };
-
-            emailjs.send('service_4bzo2ia', 'template_ahqfaax', templateParams)
-                .then(() => {
-                    showNotification('Message sent successfully!', 'success');
-                    form.reset();
-                })
-                .catch((error) => {
-                    showNotification('Failed to send message', 'error');
-                    console.error('EmailJS error:', error);
-                })
-                .finally(() => {
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = 'Send Message';
-                });
-        });
-
-        function showNotification(message, type) {
-            const notificationContainer = document.getElementById('notification-container');
-            const notification = document.createElement('div');
-            notification.innerText = message;
-            notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'}`;
-            notificationContainer.appendChild(notification);
-            setTimeout(() => notification.remove(), 3000);
-        }
+        fetch('https://indocsmail-backend.onrender.com/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                showNotification('Message sent successfully!', 'success');
+                form.reset();
+            })
+            .catch((error) => {
+                showNotification('Failed to send message', 'error');
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Send Message';
+            });
     });
+
+    function showNotification(message, type) {
+        const notificationContainer = document.getElementById('notification-container');
+        const notification = document.createElement('div');
+        notification.innerText = message;
+        notification.className = `alert alert-${type === 'success' ? 'success' : 'danger'}`;
+        notificationContainer.appendChild(notification);
+        setTimeout(() => notification.remove(), 3000);
+    }
+});
+
 </script>
 
     
